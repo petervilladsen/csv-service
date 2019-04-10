@@ -11,7 +11,7 @@ node('maven') {
     }
     stage ('Openshift build-image') {
         // create build config
-        sh 'oc new-build --name=csv-s2i-build --image-stream=redhat-openjdk18-openshift --binary=true -l app=csv-service -n skatdemo-build || true'
+        sh 'oc new-build --name=csv-s2i-build --image-stream=redhat-openjdk18-openshift:latest --binary=true -l app=csv-service -n skatdemo-build || true'
         //sh 'cp target/csv-service-*.jar oc-build/deployments'
         // start build
         sh 'oc start-build csv-s2i-build --from-dir=target --wait=true -n skatdemo-build'
