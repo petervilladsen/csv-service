@@ -49,7 +49,7 @@ We are using source-to-image (S2I) functionality to build the application.
 
 First you need to create a new build:
 
-`oc new-build -i openjdk18-openshift:latest --name=csv-s2i -l app=csv-service https://github.com/jmetso/csv-service.git`
+`oc new-build -i openjdk18-openshift:latest --name=csv-s2i -l app=csv-service https://github.com/petervilladsen/csv-service.git`
 
 A build for the application is triggered automatically. You can follow the build
 with 'oc logs -f bc/csv-s2i' or via the web console. After the build is
@@ -121,7 +121,7 @@ After the pod is back up and running, download a data file:
 
 `mkdir data`
 
-`curl https://raw.githubusercontent.com/jmetso/csv-service/master/src/test/resources/persons -o data/persons`
+`curl https://raw.githubusercontent.com/petervilladsen/csv-service/master/src/test/resources/persons -o data/persons`
 
 Find the name of the pod:
 

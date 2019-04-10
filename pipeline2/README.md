@@ -32,6 +32,6 @@ We are going to assume that jenkins will be using a specific service account for
 
 We will create the jenkins pipeline directly from git repository. If you didn't set up jenkins, creating the pipeline will also deploy a Jenkins instance to the build-project automatically. To create the jenkins pipeline, run the following command:
 
-`oc new-build https://github.com/jmetso/csv-service.git --context-dir=pipeline2 --strategy=pipeline --name=csv-pipeline -l pipeline=csv -n skatdemo-build`
+`oc new-build https://github.com/petervilladsen/csv-service.git --context-dir=pipeline2 --strategy=pipeline --name=csv-pipeline -l pipeline=csv -n skatdemo-build`
 
 After creating the pipeline, it will take some time to deploy a jenkins pod and the pipeline to actually start running. Sometimes you may have to cancel the first run and trigger a new run manually.

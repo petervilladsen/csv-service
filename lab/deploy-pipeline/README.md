@@ -59,7 +59,7 @@ We are using source-to-image (S2I) functionality to build the application.
 
 First you need to create a new build:
 
-`oc new-build --strategy=pipeline --name=csv-pipeline -l pipeline=csv https://github.com/jmetso/csv-service.git --context-dir=pipeline -n csv-service-dev`
+`oc new-build --strategy=pipeline --name=csv-pipeline -l pipeline=csv https://github.com/petervilladsen/csv-service.git --context-dir=pipeline -n csv-service-dev`
 
 Since we are using a Jenkins pipeline to do the build, we will need a Jenkins instance
 to run the pipeline. Fortunately such an image exists and the Openshift platform

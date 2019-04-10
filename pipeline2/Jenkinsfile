@@ -5,7 +5,7 @@ node('maven') {
         sh 'oc delete dc,svc -l app=csv-service -n skatdemo-dev'
     }
     stage ('Maven build') {
-        git 'https://github.com/jmetso/csv-service.git'
+        git 'https://github.com/petervilladsen/csv-service.git'
         // Run the maven build
         sh 'mvn clean package'
     }
